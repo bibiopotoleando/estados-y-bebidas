@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Material del Chat</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #fff7ed 0%, #fef3c7 50%, #ecfccb 100%);
+  color: #7c2d12;
+  line-height: 1.7;
+}
+
+header {
+  text-align: center;
+  padding: 55px 20px 35px;
+  background: #fde68a;
+  border-bottom: 6px solid #f59e0b;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  max-width: 780px;
+  margin: 14px auto 0;
+  font-size: 1.15rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 20px 60px;
+}
+
+section {
+  background: rgba(255, 251, 235, 0.96);
+  border: 2px solid #fcd34d;
+  border-radius: 24px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 22px rgba(120, 60, 0, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+  color: #b45309;
+  font-size: 1.55rem;
+}
+
+code {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.estado {
+  background: #ffffff;
+  border-left: 7px solid #f59e0b;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.box {
+  background: #ecfccb;
+  border: 2px solid #bef264;
+  border-radius: 18px;
+  padding: 16px;
+  margin-top: 14px;
+  color: #365314;
+}
+
+.links {
+  background: rgba(120,160,255,0.08);
+  border: 2px solid rgba(120,160,255,0.4);
+  border-radius: 14px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.links a {
+  color: #5c7cff;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #92400e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📦 Material del chat</h1>
+<p>
+Cada boli, cada lápiz, cada libreta… todo cuenta 💛  
+Registra el material que gastas mientras estudias y deja huella en el chat ✨
+</p>
+</header>
+
+<main>
+
+<section>
+<h2>✏️ Comandos disponibles</h2>
+
+<div class="estado"><strong><code>!boli</code></strong><br>Registra un boli gastado</div>
+<div class="estado"><strong><code>!lapiz</code></strong><br>Registra un lápiz usado</div>
+<div class="estado"><strong><code>!subrayador</code></strong><br>Registra un subrayador</div>
+<div class="estado"><strong><code>!goma</code></strong><br>Registra una goma</div>
+<div class="estado"><strong><code>!libreta</code></strong><br>Registra una libreta completada</div>
+
+</section>
+
+<section>
+<h2>📊 Ver tu progreso</h2>
+
+<p>
+Puedes ver todo el material que has usado con:
+</p>
+
+<div class="estado">
+<strong><code>!material</code></strong><br>
+Muestra tu contador personal de material ✨
+</div>
+
+<div class="box">
+Incluye:
+<ul>
+<li>✏️ lápices</li>
+<li>🖊️ bolis</li>
+<li>🖍️ subrayadores</li>
+<li>🧽 gomas</li>
+<li>📓 libretas</li>
+<li>✨ total acumulado</li>
+</ul>
+</div>
+
+</section>
+
+<section>
+<h2>💎 Recompensas</h2>
+
+<p>
+Cada material que registras:
+</p>
+
+<div class="estado">
+✨ +1 punto en el sistema del chat
+</div>
+
+<p>
+Todo suma poquito a poquito 💛
+</p>
+
+</section>
+
+<section>
+<h2>🌍 Comunidad</h2>
+
+<p>
+Cada vez que usas un comando:
+</p>
+
+<div class="box">
+📊 Se suma a tu contador personal  
+🌍 Y también al total de la comunidad
+</div>
+
+<p>
+Así entre todos vamos construyendo una especie de “historial de esfuerzo” colectivo ✨
+</p>
+
+</section>
+
+<section>
+<h2>💛 Filosofía del sistema</h2>
+
+<p>
+Esto no va de gastar cosas… va de reconocer el esfuerzo detrás.
+</p>
+
+<p>
+Cada boli vacío, cada libreta terminada,
+cada goma que desaparece…
+es tiempo que has invertido en ti 🌙
+</p>
+
+<p>
+Y aquí, eso se celebra ✨
+</p>
+
+</section>
+
+<section>
+<h2>🔗 Guías relacionadas</h2>
+
+<div class="links">
+
+<p>📌 Estados:<br>
+<a href="https://bibiopotoleando.github.io/estados-y-bebidas/estados">
+https://bibiopotoleando.github.io/estados-y-bebidas/estados.html
+</a></p>
+
+<p>🌳 Bosque virtual:<br>
+<a href="https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html">
+https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html
+</a></p>
+
+<p>📝 Tareas:<br>
+<a href="https://bibiopotoleando.github.io/bosque-visual/guia_tareas.html">
+https://bibiopotoleando.github.io/bosque-visual/guia_tareas.html
+</a></p>
+
+<p>☕ Bebidas:<br>
+<a href="https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html">
+https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html
+</a></p>
+
+<p>🎯 Retos:<br>
+<a href="https://bibiopotoleando.github.io/retos/retos.html">
+https://bibiopotoleando.github.io/retos/retos.html
+</a></p>
+
+<p>🎮 Minijuego:<br>
+<a href="https://bibiopotoleando.github.io/minijuego-guia/">
+https://bibiopotoleando.github.io/minijuego-guia/
+</a></p>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+📦 Cada cosa que gastas cuenta una historia ✨
+</footer>
+
+</body>
+</html>
