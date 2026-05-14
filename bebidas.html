@@ -6,11 +6,12 @@
 
 <style>
 body {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: #1e1e1e;
     color: #f1f1f1;
     margin: 0;
     padding: 30px;
+    line-height: 1.6;
 }
 
 .container {
@@ -21,12 +22,14 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .sub {
     text-align: center;
     color: #bbb;
     margin-bottom: 30px;
+    font-size: 18px;
 }
 
 .section {
@@ -37,6 +40,7 @@ h1 {
     border-bottom: 1px solid #444;
     padding-bottom: 5px;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 .bebida {
@@ -45,10 +49,16 @@ h1 {
     border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
 .bebida:hover {
     background: #333;
+}
+
+.bebida p {
+    margin: 5px 0 0 0;
+    color: #ccc;
 }
 
 code {
@@ -56,12 +66,13 @@ code {
     padding: 2px 6px;
     border-radius: 5px;
     color: #9cdcfe;
+    font-weight: bold;
 }
 
-/* 🔗 LINKS (añadido) */
+/* 🔗 LINKS */
 .links {
-  background: rgba(120,160,255,0.08);
-  border: 2px solid rgba(120,160,255,0.4);
+  background: rgba(120,160,255,0.05);
+  border: 2px solid rgba(120,160,255,0.3);
   border-radius: 14px;
   padding: 15px;
   margin-top: 20px;
@@ -69,10 +80,11 @@ code {
 
 .links p {
   margin-bottom: 14px;
+  margin-top: 0;
 }
 
 .links a {
-  color: #5c7cff;
+  color: #7fa2ff;
   font-weight: 600;
   word-break: break-word;
 }
@@ -81,7 +93,7 @@ code {
     margin-top: 40px;
     text-align: center;
     color: #888;
-    font-size: 13px;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -91,107 +103,101 @@ code {
 <div class="container">
 
 <h1>☕ Bebidas y pausitas ✨</h1>
-<p class="sub">Un sistema para hidratarse, cuidarse y sumar puntitos 💚</p>
+<p class="sub">Un sistema interactivo para hidratarse, cuidarse y compartir tus descansos con el chat 💚</p>
 
-<!-- BEBIDAS -->
 <div class="section">
 <h2>🥤 Bebidas</h2>
 
 <div class="bebida">
 <strong>!agua 💧</strong>
-<p>Hidrátate como una persona responsable 😌 (+2 puntos)</p>
+<p>Hidrátate como una persona responsable en tus horas de estudio 😌</p>
 </div>
 
 <div class="bebida">
 <strong>!café ☕</strong>
-<p>Para sobrevivir al directo ☕ (+1 punto)</p>
+<p>La poción mágica obligatoria para sobrevivir al directo de enfoque ☕</p>
 </div>
 
 <div class="bebida">
 <strong>!té 🍵</strong>
-<p>Modo calma activado 🧘‍♀️ (+1 punto)</p>
+<p>Modo calma y concentración profunda activado 🧘‍♀️</p>
 </div>
 
 <div class="bebida">
 <strong>!matcha 🍵</strong>
-<p>Energía suave y zen 🌿 (+1 punto)</p>
+<p>Energía limpia, suave y de estilo zen para avanzar temas 🌿</p>
 </div>
 
 <div class="bebida">
 <strong>!mate 🧉</strong>
-<p>Charleta y energía constante 🫶 (+1 punto)</p>
+<p>Charleta activa en los descansos y dosis constante de productividad 🫶</p>
 </div>
 
 <div class="bebida">
 <strong>!colacao 🍫</strong>
-<p>Bebida calentita ☕ (+1 punto)</p>
+<p>Una taza calentita y reconfortante para los Pomodoros más duros ☕</p>
 </div>
 
 <div class="bebida">
 <strong>!cocacola 🥤</strong>
-<p>Felicidad burbujeante ✨ (+1 punto)</p>
+<p>Una pequeña pausa con felicidad burbujeante ✨</p>
 </div>
 
 <div class="bebida">
 <strong>!bebidaenergética ⚡</strong>
-<p>Power-up inmediato 🚀 (+1 punto)</p>
+<p>Power-up inmediato para los repasos de última hora 🚀</p>
 </div>
 
 </div>
 
-<!-- COMIDAS -->
 <div class="section">
 <h2>🍽️ Comidas</h2>
 
 <div class="bebida">
 <strong>!desayuno 🥐</strong>
-<p>Empieza el día con energía ☀️</p>
+<p>Empieza la primera sesión de estudio del día con toda la fuerza ☀️</p>
 </div>
 
 <div class="bebida">
 <strong>!almuerzo 🥪</strong>
-<p>Snack de media mañana para seguir con fuerza 💪</p>
+<p>Snack de media mañana para recargar las pilas en el descanso 💪</p>
 </div>
 
 <div class="bebida">
 <strong>!comida 🍽️</strong>
-<p>Comida principal del día 🍛</p>
+<p>Pausa larga para la comida principal del día y despejar la mente 🍛</p>
 </div>
 
 <div class="bebida">
 <strong>!merienda 🍪</strong>
-<p>Pausita dulce o salada 🍩</p>
+<p>Una pausa dulce o salada para superar el bajón de la tarde 🍩</p>
 </div>
 
 <div class="bebida">
 <strong>!cena 🌙</strong>
-<p>Última comida del día 🍲</p>
+<p>Última comida del día para descansar tras una jornada bien cumplida 🍲</p>
 </div>
 
 <div class="bebida">
 <strong>!copita 🍷</strong>
-<p>Modo chill activado (con moderación 😌)</p>
+<p>Modo chill de fin de semana activado (siempre con moderación 😌)</p>
 </div>
 
 </div>
 
-<!-- RESUMEN -->
 <div class="section">
-<h2>📋 Resumen rápido</h2>
-
-<p><code>!agua</code> — hidratarse</p>
-<p><code>!café</code>, <code>!té</code>, <code>!matcha</code>, <code>!mate</code></p>
-<p><code>!colacao</code>, <code>!cocacola</code>, <code>!bebidaenergética</code></p>
-
+<h2>📋 Resumen rápido de comandos</h2>
+<div class="bebida" style="background: rgba(255,255,255,0.03);">
+<p><code>!agua</code> — Hidratación rápida</p>
+<p><code>!café</code>, <code>!té</code>, <code>!matcha</code>, <code>!mate</code> — Infusiones y estudio</p>
+<p><code>!colacao</code>, <code>!cocacola</code>, <code>!bebidaenergética</code> — Snacks líquidos</p>
 <br>
-
-<p><code>!desayuno</code>, <code>!almuerzo</code>, <code>!comida</code></p>
-<p><code>!merienda</code>, <code>!cena</code>, <code>!copita</code></p>
-
+<p><code>!desayuno</code>, <code>!almuerzo</code>, <code>!comida</code> — Comidas de mañana y mediodía</p>
+<p><code>!merienda</code>, <code>!cena</code>, <code>!copita</code> — Comidas de tarde, noche y desconexión</p>
+</div>
 </div>
 
-<!-- GUÍAS -->
-<section>
+<div class="section">
   <h2>🔗 Guías relacionadas</h2>
 
   <div class="links">
@@ -239,22 +245,22 @@ code {
     </p>
 
     <p>📦 Material:<br>
-<a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
-https://bibiopotoleando.github.io/estados-y-bebidas/material.html
-</a>
-</p>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/material.html
+      </a>
+    </p>
 
     <p>🏅 Insignias:<br>
-  <a href="https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html">
-    https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html
-  </a>
-</p>
-    
+      <a href="https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html">
+        https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html
+      </a>
+    </p>
+        
   </div>
-</section>
+</div>
 
 <div class="footer">
-Hecho con ☕ y buenas vibes
+Hecho con ☕ y buenas vibes en el rincón opotoleante ✨
 </div>
 
 </div>
