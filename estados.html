@@ -1,4 +1,5 @@
-html_content = """<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -192,7 +193,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
   <h2>⏸️ Control de Tiempo y Descansos</h2>
   
   <div class="estado" style="border-left-color: #3b82f6;">
-    <strong>!pausa !paro⏱️</strong>
+    <strong>!pausa !paro ⏱️</strong>
     <p>Congela tu tiempo actual cuando vayas a estirar, beber agua o descansar. ¡El reloj no sumará minutos hasta que vuelvas!</p>
   </div>
   
@@ -210,6 +211,61 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
 
 <section>
   <h2>🏆 Consultas de Tiempo</h2>
+
+  <div class="estado" style="border-left-color: #10b981;">
+    <strong>!mitiempo ⏳</strong>
+    <p>
+      Consulta todo el tiempo que has acumulado en cada uno de tus estados.
+      El bot solo mostrará las categorías en las que tengas tiempo registrado.
+    </p>
+
+    <div class="box">
+      <strong>Ejemplo:</strong><br>
+      <code>!mitiempo</code><br><br>
+      🌿 Tus tiempos pueden aparecer como:<br>
+      📚 Opositando · 📝 Estudiando · 💻 Teletrabajando · 📖 Leyendo · 🫶 Apoyando
+    </div>
+  </div>
+
+  <div class="estado" style="border-left-color: #10b981;">
+    <strong>!mitiempo + estado 🔎</strong>
+    <p>
+      Si solo quieres consultar una categoría, escribe el estado después del comando.
+      Así el bot te enseñará únicamente ese contador.
+    </p>
+
+    <div class="box">
+      <strong>Ejemplos:</strong><br><br>
+
+      <code>!mitiempo opositando</code><br>
+      Solo muestra tu tiempo opositando.<br><br>
+
+      <code>!mitiempo estudiando</code><br>
+      Solo muestra tu tiempo estudiando.<br><br>
+
+      <code>!mitiempo leyendo</code><br>
+      Solo muestra tu tiempo leyendo.<br><br>
+
+      <code>!mitiempo teletrabajando</code><br>
+      Solo muestra tu tiempo teletrabajando.<br><br>
+
+      <code>!mitiempo apoyando</code><br>
+      Muestra tu tiempo de acompañamiento.
+    </div>
+
+    <div class="box" style="margin-top: 14px;">
+      💚 <strong>Apoyo y fondo van juntos:</strong>
+      el tiempo de <code>!apoyando</code>, <code>!lurk</code> y <code>!defondo</code>
+      se considera una misma categoría de acompañamiento.
+    </div>
+
+    <p>
+      También puedes usar algunas formas más cortas o habituales, como
+      <code>!mitiempo opo</code>, <code>!mitiempo estudio</code>,
+      <code>!mitiempo trabajo</code>, <code>!mitiempo lurk</code>
+      o <code>!mitiempo defondo</code>.
+    </p>
+  </div>
   
   <div class="estado" style="border-left-color: #10b981;">
     <strong>!top 🏅</strong>
@@ -271,6 +327,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     </p>
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -279,29 +336,5 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
 
 </body>
 </html>
-"""
+```
 
-import re
-# The requested URL to replace with
-insignias_url = "https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html"
-
-# A regex to catch the old URL, even with slight variations if any exist
-old_url_pattern = r"https://bibiopotoleando\.github\.io/(insignias-visual|guia-insignias)/guia_insignias\.html"
-
-new_html_content = re.sub(old_url_pattern, insignias_url, html_content)
-
-# Add the Discord link block to the "Guías relacionadas" section if it's not already there
-discord_link_block = """
-    <p>👾 Discord:<br>
-      <a href="https://bibiopotoleando.github.io/discord/index.html">
-        https://bibiopotoleando.github.io/discord/index.html
-      </a>
-    </p>"""
-
-if "👾 Discord" not in new_html_content and '<div class="links">' in new_html_content:
-    new_html_content = new_html_content.replace('</div>\n</section>', f'{discord_link_block}\n  </div>\n</section>')
-
-with open('GITHUB_ESTADOS_LINKS_UPDATED.html', 'w', encoding='utf-8') as f:
-    f.write(new_html_content)
-
-print("[file-tag: GITHUB_ESTADOS_LINKS_UPDATED.html]")
