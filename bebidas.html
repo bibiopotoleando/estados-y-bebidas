@@ -13,17 +13,98 @@ body{font-family:"Segoe UI",Arial,sans-serif;background:#1e1e1e;color:#f1f1f1;ma
 code{background:#111;padding:2px 6px;border-radius:5px;color:#9cdcfe;font-weight:bold}
 .links{background:rgba(120,160,255,.05);border:2px solid rgba(120,160,255,.3);border-radius:14px;padding:15px;margin-top:20px}
 .links p{margin-bottom:14px;margin-top:0} .links a{color:#7fa2ff;font-weight:600;word-break:break-word}
-.footer{margin-top:40px;text-align:center;color:#888;font-size:14px}
+.footer{margin-text-align:center;color:#888;font-size:14px}
 html{scroll-behavior:smooth}
 .indice{background:#262626;border:1px solid #444;border-radius:18px;padding:15px;margin:0 0 30px}
 .indice h2{margin:0 0 10px;text-align:center;font-size:1.15rem}
 .indice-grid{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
 .indice-link{display:inline-block;padding:9px 13px;border-radius:999px;background:#333;border:1px solid #555;color:#f1f1f1;text-decoration:none;font-weight:700}
 .indice-link:hover{background:#3d3d3d}
-.volver{display:inline-block;margin-top:10px;color:#9cdcfe;font-weight:700;text-decoration:none}
+.volver{display:inline-block;margin-color:#9cdcfe;font-weight:700;text-decoration:none}
+
+.top-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#2f2a27;
+  color:#ffd9b3;
+  border:2px solid #7b665b;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.top-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 9px 22px rgba(0,0,0,.22);
+}
+@media(max-width:600px){
+  .top-btn{
+    right:12px;
+    bottom:12px;
+    padding:9px 12px;
+    font-size:.9rem;
+  }
+}
+
+
+
+}
+
+
+
+/* ===== navegación flotante compacta ===== */
+.nav-flotante{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:1200;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.nav-flotante a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:10px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.9rem;
+  line-height:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  transition:transform .15s ease, filter .15s ease;
+}
+.nav-flotante a:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.03);
+}
+@media(max-width:600px){
+  .nav-flotante{
+    right:10px;
+    bottom:10px;
+    gap:6px;
+  }
+  .nav-flotante a{
+    padding:9px 10px;
+    font-size:.82rem;
+  }
+}
+
+.nav-flotante a{background:#333;color:#f1f1f1;border:1px solid #666;}
+
 </style>
 </head>
-<body>
+<body id="arriba">
 <div class="container">
 <h1>☕ Bebidas y pausitas ✨</h1>
 <p class="sub">Un sistema interactivo para hidratarse, cuidarse y compartir tus descansos con el chat 💚</p>
@@ -47,7 +128,7 @@ html{scroll-behavior:smooth}
 <div class="bebida"><strong>!colacao 🍫</strong><p>Una taza calentita y reconfortante para los bloques duros.</p></div>
 <div class="bebida"><strong>!cocacola 🥤</strong><p>Pausa burbujeante ✨</p></div>
 <div class="bebida"><strong>!bebidaenergetica / !bebidaenerxetica ⚡</strong><p>Para registrar esa energética que te acompaña en la sesión.</p></div>
-<a class="volver" href="#indice">↑ Volver al índice</a></div>
+<a class="volver" href="#indice">↑ Volver arriba</a></div>
 
 <div class="section" id="comidas"><h2>🍽️ Comidas</h2>
 <div class="bebida"><strong>!desayuno 🥐</strong><p>Empieza el día con algo de combustible.</p></div>
@@ -56,7 +137,7 @@ html{scroll-behavior:smooth}
 <div class="bebida"><strong>!merienda 🍪</strong><p>Un respiro dulce o salado para la tarde.</p></div>
 <div class="bebida"><strong>!cena / !cea 🌙</strong><p>Última comida del día y a bajar revoluciones 🍲</p></div>
 <div class="bebida"><strong>!copita 🍷</strong><p>Modo chill cuando toca desconectar 😌</p></div>
-<a class="volver" href="#indice">↑ Volver al índice</a></div>
+<a class="volver" href="#indice">↑ Volver arriba</a></div>
 
 <div class="section" id="resumen"><h2>📋 Resumen rápido</h2>
 <div class="bebida" style="background:rgba(255,255,255,.03)">
@@ -65,7 +146,7 @@ html{scroll-behavior:smooth}
 <p><code>!almuerzo</code> — Pausa de media mañana</p>
 <p><code>!comida</code> / <code>!xantar</code> — Comida</p>
 <p><code>!cena</code> / <code>!cea</code> — Cena</p>
-</div><a class="volver" href="#indice">↑ Volver al índice</a></div>
+</div><a class="volver" href="#indice">↑ Volver arriba</a></div>
 
 <div class="section" id="guias"><h2>🔗 Guías relacionadas</h2><div class="links">
   <p>🌳 Bosque virtual:<br><a href="https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html">https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html</a></p>
@@ -78,8 +159,17 @@ html{scroll-behavior:smooth}
   <p>🏅 Insignias:<br><a href="https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html">https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html</a></p>
   <p>📦 Material:<br><a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">https://bibiopotoleando.github.io/estados-y-bebidas/material.html</a></p>
   <p>👾 Discord:<br><a href="https://bibiopotoleando.github.io/discord/index.html">https://bibiopotoleando.github.io/discord/index.html</a></p>
-</div><a class="volver" href="#indice">↑ Volver al índice</a></div>
+</div><a class="volver" href="#indice">↑ Volver arriba</a></div>
 <div class="footer">Hecho con ☕ y buenas vibes en el rincón opotoleante ✨</div>
 </div>
+
+<a class="top-btn" href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+
+
+<div class="nav-flotante" aria-label="Navegación rápida">
+  <a href="#indice" aria-label="Ir al menú de esta guía">☰ Menú</a>
+  <a href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+</div>
+
 </body>
 </html>

@@ -79,8 +79,7 @@ code {
   border: 2px solid #bef264;
   border-radius: 18px;
   padding: 16px;
-  margin-top: 14px;
-  color: #365314;
+  margin-color: #365314;
 }
 
 .warning {
@@ -88,8 +87,7 @@ code {
   border: 2px solid #fdba74;
   border-radius: 18px;
   padding: 16px;
-  margin-top: 14px;
-  color: #7c2d12;
+  margin-color: #7c2d12;
 }
 
 /* 🔗 LINKS */
@@ -98,8 +96,7 @@ code {
   border: 2px solid rgba(120,160,255,0.4);
   border-radius: 14px;
   padding: 15px;
-  margin-top: 20px;
-}
+  margin-}
 
 .links p {
   margin-bottom: 14px;
@@ -125,17 +122,98 @@ section[id]{scroll-margin-top:18px}
 .indice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
 .indice-link{display:flex;align-items:center;justify-content:center;text-align:center;padding:11px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid #c4b5fd;color:inherit;text-decoration:none;font-weight:700;box-shadow:0 3px 10px rgba(120,80,30,.07)}
 .indice-link:hover{transform:translateY(-1px);background:#fff}
-.volver{display:inline-block;margin-top:12px;color:inherit;font-weight:700;text-decoration:none;opacity:.78}
+.volver{display:inline-block;margin-color:inherit;font-weight:700;text-decoration:none;opacity:.78}
 .volver:hover{text-decoration:underline}
 .demo-btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border-radius:999px;background:#efe2d2;color:#3d2d22;text-decoration:none;font-weight:800;border:1px solid #d7c2a8}
 .demo-btn:hover{filter:brightness(.98);transform:translateY(-1px)}
 @media(max-width:760px){.indice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.indice-grid{grid-template-columns:1fr}}
 
+
+.top-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#2f2a27;
+  color:#ffd9b3;
+  border:2px solid #7b665b;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.top-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 9px 22px rgba(0,0,0,.22);
+}
+@media(max-width:600px){
+  .top-btn{
+    right:12px;
+    bottom:12px;
+    padding:9px 12px;
+    font-size:.9rem;
+  }
+}
+
+
+
+}
+
+
+
+/* ===== navegación flotante compacta ===== */
+.nav-flotante{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:1200;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.nav-flotante a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:10px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.9rem;
+  line-height:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  transition:transform .15s ease, filter .15s ease;
+}
+.nav-flotante a:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.03);
+}
+@media(max-width:600px){
+  .nav-flotante{
+    right:10px;
+    bottom:10px;
+    gap:6px;
+  }
+  .nav-flotante a{
+    padding:9px 10px;
+    font-size:.82rem;
+  }
+}
+
+.nav-flotante a{background:#f5f3ff;color:#4c1d95;border:2px solid #c4b5fd;}
+
 </style>
 </head>
 
-<body>
+<body id="arriba">
 
 <header>
 <h1>📌 Guía de Estados del Chat</h1>
@@ -165,7 +243,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
   <div class="box" style="margin-bottom: 24px;">
     💡 <strong>Consejo:</strong> Mantén tu estado actualizado para motivar al resto del chat y ganar precisión en tu contador personal.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="concentracion"><h2>🎯 Estados de Concentración</h2>
   <p>Usa uno de estos comandos para iniciar tu contador de tiempo productivo.</p>
@@ -189,7 +267,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!teletrabajando 💻</strong>
     <p>Inicia tu contador si nos acompañas sacando adelante tus tareas del trabajo.</p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="acompanamiento"><h2>☕ Estados de Acompañamiento</h2>
   <p>Si no estás en una sesión estricta pero quieres sumar presencia, usa estos comandos.</p>
@@ -203,7 +281,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!apoyando 💚</strong>
     <p>Para dejar constancia de que estás animando al grupo aunque hoy no te toque hincar codos.</p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="control"><h2>⏸️ Control de Tiempo y Descansos</h2>
   
@@ -221,7 +299,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!fin 🛑</strong>
     <p>Cierra tu estado actual y deja guardado el tiempo acumulado. Si te marchas sin usarlo, el sistema también puede cerrar tu sesión cuando detecta que ya no estás.</p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="consultas"><h2>🏆 Consultas de Tiempo</h2>
 
@@ -266,7 +344,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
       Muestra tu tiempo de acompañamiento.
     </div>
 
-    <div class="box" style="margin-top: 14px;">
+    <div class="box" style="margin-">
       💚 <strong>Apoyo y fondo van juntos:</strong>
       el tiempo de <code>!apoyando</code>, <code>!lurk</code> y <code>!defondo</code>
       se considera una misma categoría de acompañamiento.
@@ -289,7 +367,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!infoestados / !infoestadosgal ℹ️</strong>
     <p>Un recordatorio rápido en el chat con los comandos básicos de esta guía.</p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="guias"><h2>🔗 Guías relacionadas</h2>
 
@@ -338,13 +416,22 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
       </a>
     </p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 </main>
 
 <footer>
 📌 Gracias por compartir tu ratito con el chat ✨
 </footer>
+
+
+<a class="top-btn" href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+
+
+<div class="nav-flotante" aria-label="Navegación rápida">
+  <a href="#indice" aria-label="Ir al menú de esta guía">☰ Menú</a>
+  <a href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+</div>
 
 </body>
 </html>
