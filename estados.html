@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -118,6 +117,21 @@ footer {
   color: #581c87;
   font-size: 1.05rem;
 }
+
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:18px}
+.indice{background:linear-gradient(135deg,#fffdf6 0%,#fff7df 100%);border:2px solid #a78bfa}
+.indice-intro{margin-top:-4px;opacity:.82}
+.indice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.indice-link{display:flex;align-items:center;justify-content:center;text-align:center;padding:11px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid #c4b5fd;color:inherit;text-decoration:none;font-weight:700;box-shadow:0 3px 10px rgba(120,80,30,.07)}
+.indice-link:hover{transform:translateY(-1px);background:#fff}
+.volver{display:inline-block;margin-top:12px;color:inherit;font-weight:700;text-decoration:none;opacity:.78}
+.volver:hover{text-decoration:underline}
+.demo-btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border-radius:999px;background:#efe2d2;color:#3d2d22;text-decoration:none;font-weight:800;border:1px solid #d7c2a8}
+.demo-btn:hover{filter:brightness(.98);transform:translateY(-1px)}
+@media(max-width:760px){.indice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.indice-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 
@@ -132,14 +146,18 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
 </header>
 
 <main>
+<section class="indice" id="indice">
+<h2>📚 Ir directamente a...</h2>
+<p class="indice-intro">Pulsa en el apartado que quieras consultar.</p>
+<div class="indice-grid"><a class="indice-link" href="#como">✨ Cómo funciona</a><a class="indice-link" href="#concentracion">🎯 Concentración</a><a class="indice-link" href="#acompanamiento">☕ Acompañamiento</a><a class="indice-link" href="#control">⏸️ Pausas y fin</a><a class="indice-link" href="#consultas">🏆 Consultas</a><a class="indice-link" href="#guias">🔗 Más guías</a></div>
+</section>
 
 <div class="box" style="border-left: 7px solid #3b82f6; background: rgba(59, 130, 246, 0.05); margin-bottom: 24px; padding: 20px; border-radius: 20px; color: #1e3a8a; border-color: #93c5fd;">
   💙 <strong>Nota sobre o idioma / Nota bilingüe:</strong> 
   O bot entende perfectamente cando lle falas en galego. Usa comandos como <code>!infoestadosgal</code> e o bot responderache na nosa lingua con moito agarimo ✨.
 </div>
 
-<section>
-  <h2>✨ ¿Cómo funcionan los estados?</h2>
+<section id="como"><h2>✨ ¿Cómo funcionan los estados?</h2>
   <div class="card" style="background: rgba(255,255,255,0.5); padding: 15px; border-radius: 12px; margin-bottom: 20px;">
     <p>El sistema de estados sirve para contabilizar tu tiempo productivo en la sala de coestudio. Al usar estos comandos, el bot registra cuándo empiezas, cuándo pausas y cuándo terminas tu sesión, ¡sumando ese tiempo a tu perfil y al ranking de la comunidad! 📝</p>
   </div>
@@ -147,10 +165,9 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
   <div class="box" style="margin-bottom: 24px;">
     💡 <strong>Consejo:</strong> Mantén tu estado actualizado para motivar al resto del chat y ganar precisión en tu contador personal.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🎯 Estados de Concentración</h2>
+<section id="concentracion"><h2>🎯 Estados de Concentración</h2>
   <p>Usa uno de estos comandos para iniciar tu contador de tiempo productivo.</p>
   
   <div class="estado">
@@ -172,14 +189,13 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!teletrabajando 💻</strong>
     <p>Inicia tu contador si nos acompañas sacando adelante tus tareas del trabajo.</p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>☕ Estados de Acompañamiento</h2>
+<section id="acompanamiento"><h2>☕ Estados de Acompañamiento</h2>
   <p>Si no estás en una sesión estricta pero quieres sumar presencia, usa estos comandos.</p>
   
   <div class="estado" style="border-left-color: #f59e0b;">
-    <strong>!defondo ☁️</strong>
+    <strong>!defondo / !lurk ☁️</strong>
     <p>Para avisar de que estás por la sala haciendo otras cosas pero escuchándonos de fondo.</p>
   </div>
 
@@ -187,10 +203,9 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!apoyando 💚</strong>
     <p>Para dejar constancia de que estás animando al grupo aunque hoy no te toque hincar codos.</p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>⏸️ Control de Tiempo y Descansos</h2>
+<section id="control"><h2>⏸️ Control de Tiempo y Descansos</h2>
   
   <div class="estado" style="border-left-color: #3b82f6;">
     <strong>!pausa !paro ⏱️</strong>
@@ -198,19 +213,17 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
   </div>
   
   <div class="estado" style="border-left-color: #3b82f6;">
-    <strong>!volví 🔄</strong>
+    <strong>!volví / !back 🔄</strong>
     <p>Reactiva tu contador después de una pausa para seguir sumando tiempo.</p>
   </div>
 
   <div class="estado" style="border-left-color: #ef4444;">
     <strong>!fin 🛑</strong>
-    <p>Cierra definitivamente tu sesión de hoy. El bot guardará todo el tiempo que hayas acumulado en esta jornada. 
-      Aunque si te vas del directo sin poner este comando, el bot te guardará el tiempo igualmente. Este comando es útil si quieres saber el tiempo que llevas en ese momento.</p>
+    <p>Cierra tu estado actual y deja guardado el tiempo acumulado. Si te marchas sin usarlo, el sistema también puede cerrar tu sesión cuando detecta que ya no estás.</p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🏆 Consultas de Tiempo</h2>
+<section id="consultas"><h2>🏆 Consultas de Tiempo</h2>
 
   <div class="estado" style="border-left-color: #10b981;">
     <strong>!mitiempo ⏳</strong>
@@ -276,10 +289,9 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
     <strong>!infoestados / !infoestadosgal ℹ️</strong>
     <p>Un recordatorio rápido en el chat con los comandos básicos de esta guía.</p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🔗 Guías relacionadas</h2>
+<section id="guias"><h2>🔗 Guías relacionadas</h2>
 
   <div class="links">
     <p>🌳 Bosque virtual:<br>
@@ -326,7 +338,7 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
       </a>
     </p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
 </main>
 
@@ -336,5 +348,3 @@ estudiar, opositar, leer, teletrabajar, apoyar o tener el stream de fondo ✨
 
 </body>
 </html>
-```
-
